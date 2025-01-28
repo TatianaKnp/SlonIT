@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let prices = [10000, 20000, 30000];
+
+        function getTheTotalAmount(arr) {
+
+            let totalAmount = 0;
+
+            arr.forEach(price => {
+                totalAmount += price;
+            });
+
+            return totalAmount;
+        }
+        
+        console.log(getTheTotalAmount(prices));
+
+    </script>
+</body>
+</html>
