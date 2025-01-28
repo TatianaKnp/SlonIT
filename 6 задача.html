@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        let first = 1
+        let last = 100
+
+        let generatedNum = Math.floor(Math.random() * 100 + 1)
+        let middle = Math.floor((first + last) / 2)
+
+        let check = false
+        
+        console.log(`Компьютер 1: Загадал число ${generatedNum}`)
+
+        while (!check) {
+            console.log(`Компьютер 2: Пробую число ${middle}`)
+            if (middle === generatedNum) {
+                console.log('Компьютер 1: Угадал!')
+                check = true
+            } else if (middle > generatedNum) {
+                console.log('Компьютер 1: Меньше!')
+                last = middle
+                middle = Math.round((first + last) / 2)
+            } else {
+                console.log('Компьютер 1: Больше!')
+                first = middle
+                middle = Math.round((first + last) / 2)
+            }
+        }
+
+    </script>
+</body>
+</html>
